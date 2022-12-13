@@ -10,8 +10,6 @@ Rails.application.routes.draw do
     get("/discover",     to: "discover#index")
   end
 
-    # get '/movies', to: 'movies#top_rated'
-    # get '/movies/search', to: 'movies#search'
   get("/register",   to: "users#new")
   post("/register",   to: "users#create")
   get("/login",   to: "users#login_form")
