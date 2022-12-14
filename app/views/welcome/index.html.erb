@@ -2,17 +2,29 @@
 <div class="row">
   <div class="column">
     <div id="creation">
+<% if session[:user_id] %>
+<p> your logged in</p>
+<%=link_to "Logout", '/logout', method: :delete%>
 
+<% else %>
       <center><%=button_to"Create New User","/register", method: :get %></center>
       <center><%=button_to"Log in",login_path, method: :get %></center>
+      <% end %>
     </div>
   </div>
 </div>
 <div id= "all_users">
-  <strong><h3>Existing Users</h3></strong>
-  <%@users.each do |user|%>
-  <div id= <%="existing_users-#{user.id}"%>>
+  <% if session[:user_id] %>
+    <strong><h3>Existing Users</h3></strong>
+    <%@users.each do |user|%>
+<% if session[:user_id] %>
+    <p><%= user.email %></p>
+  <% else %>
+    <div id= <%="existing_users-#{user.id}"%>>
     <%=link_to user.email, user_path(user), method: :get%>
   <%end%>
+  <% end %>
+  <% end %>
+
   </div>
 </div>
