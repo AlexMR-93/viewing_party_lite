@@ -107,30 +107,13 @@
           null,
           null,
           1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          null,
-          null,
-          1,
+          5,
           null,
           null,
           1,
           0,
           null,
+          0,
           0,
           0,
           0,
@@ -259,6 +242,30 @@
           null
         ]
       },
+      "/Users/alexmorareyes/turing/3mod/projects/viewing_party_lite/app/controllers/sessions_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/alexmorareyes/turing/3mod/projects/viewing_party_lite/app/controllers/viewing_parties_controller.rb": {
         "lines": [
           0,
@@ -311,6 +318,6 @@
         }
       }
     },
-    "timestamp": 1670904848
+    "timestamp": 1670995662
   }
 }

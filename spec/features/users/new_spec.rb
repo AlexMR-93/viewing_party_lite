@@ -27,29 +27,12 @@ RSpec.describe("New Register Page") do
     describe("sad path testing") do
       it("shows a flash message when a user enters a username thats already been used") do
         fill_in("Name",         with: "Mary")
-        fill_in("Email",         with: "mary.smith@gmail.com")
-        click_on("Create New User")
-        expect(page).to(have_content("Email has already been taken"))
-        fill_in("Name",         with: "Mary")
         fill_in("Email",         with: "mary.smith2@gmail.com")
         fill_in(:password,         with: "test123")
         fill_in(:password_confirmation,         with: "test123")
         click_on("Create New User")
         new_user = User.last.id
         expect(current_path).to(eq(user_path(new_user)))
-      end
-
-      require "rails_helper"
-
-
-      it("can log in with valid credentials") do
-        user = User.create(        name: "funbucket13",         email: "EEE@email.com",         password: "test",         password_confirmation: "test")
-        visit(login_path)
-        fill_in(:email,         with: user.email)
-        fill_in(:password,         with: user.password)
-        click_on("Log In")
-        expect(current_path).to(eq(user_path(user)))
-        expect(page).to(have_content("Welcome back, #{user.name}!"))
       end
     end
   end
